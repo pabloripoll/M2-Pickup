@@ -1,0 +1,21 @@
+{
+    "name": "pripoll/crud-pickup-points",
+    "description": "Pickup Points, Edit/Add Registers And Installer In Magento2",
+    "require": {
+        "php": "~7.2.*|7.3.*"
+    },
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Pripoll\\PickupPoints\\": ""
+        }
+    }
+}

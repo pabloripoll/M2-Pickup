@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/** adminhtml routes xml
+ * @category  Pripoll
+ * @package   Pripoll_PickupPoints
+ * @author    Pablo Ripoll
+ * @copyright Copyright (c) 2020~ Pablo Ripoll (http://pabloripoll.com)
+ * @license   http://pabloripoll.com/magento2-modules-license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+
+        <route id="posts" frontName="posts">
+            <module name="Pripoll_PickupPoints" />
+        </route>
+        <route id="pickup" frontName="info">
+            <module name="Pripoll_PickupPoints" />
+        </route>
+
+    </router>
+</config>

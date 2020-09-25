@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/* routes xml
+ * @category  Pripoll
+ * @package   Pripoll_PickupPoints
+ * @author    Pablo Ripoll
+ * @copyright Copyright (c) 2020~ Pablo Ripoll (http://pabloripoll.com)
+ * @license   http://pabloripoll.com/magento2-modules-license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../lib/internal/Magento/Framework/App/etc/routes.xsd">
+<router id="standard">
+    <route id="grid" frontName="grid">
+        <module name="Pripoll_PickupPoints" />
+    </route>
+</router>
+</config>

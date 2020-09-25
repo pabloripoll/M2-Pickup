@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/** menu xml
+ * @category  Pripoll
+ * @package   Pripoll_PickupPoints
+ * @author    Pablo Ripoll
+ * @copyright Copyright (c) 2020~ Pablo Ripoll (http://pabloripoll.com)
+ * @license   http://pabloripoll.com/magento2-modules-license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<!-- Magento sidebar Menu -->
+			<!--<add id="Pripoll_PickupPoints::manager" title="P.Ripoll" module="Pripoll_PickupPoints" sortOrder="10" resource="Pripoll_PickupPoints::manager" />-->	
+				<!-- Sub Menu -->
+				<add id="Pripoll_PickupPoints::posts_list" title="Pickup Posts" module="Pripoll_PickupPoints" sortOrder="50" action="posts/posts" parent="Magento_Sales::sales" resource="Magento_Sales::sales" />
+				<add id="Pripoll_PickupPoints::pickup_info" title="Pickup Info." module="Pripoll_PickupPoints" sortOrder="60" action="pickup/info" parent="Magento_Sales::sales" resource="Magento_Sales::sales" />
+    </menu>
+</config>

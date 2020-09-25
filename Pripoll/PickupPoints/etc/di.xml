@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/** di xml
+ * @category  Pripoll
+ * @package   Pripoll_PickupPoints
+ * @author    Pablo Ripoll
+ * @copyright Copyright (c) 2020~ Pablo Ripoll (http://pabloripoll.com)
+ * @license   http://pabloripoll.com/magento2-modules-license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    
+    <!-- Collection Factories -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="posts_grid_data_source" xsi:type="string">
+                Pripoll\PickupPoints\Model\ResourceModel\Posts\Posts\Collection</item>
+                <item name="pickup_info_data_source" xsi:type="string">
+                Pripoll\PickupPoints\Model\ResourceModel\View\View\Collection</item>
+            </argument>            
+        </arguments>
+    </type>
+
+    <!-- Sales Pickup Posts Data -->
+    <preference for="Pripoll\PickupPoints\Api\Data\PostsInterface" type="Pripoll\PickupPoints\Model\Posts" />
+    <virtualType name="Pripoll\PickupPoints\Model\ResourceModel\Posts\Posts\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">pripoll_sales_pickup_posts</argument>
+            <argument name="resourceModel" xsi:type="string">Pripoll\PickupPoints\Model\ResourceModel\Posts</argument><!-- Class -->
+        </arguments>
+    </virtualType>
+
+    <!-- Sales Pickup Info Data-->
+    <preference for="Pripoll\PickupPoints\Api\Data\ViewInterface" type="Pripoll\PickupPoints\Model\View" />
+    <virtualType name="Pripoll\PickupPoints\Model\ResourceModel\View\View\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">pripoll_sales_pickup_info</argument>
+            <argument name="resourceModel" xsi:type="string">Pripoll\PickupPoints\Model\ResourceModel\View</argument><!-- Class -->
+        </arguments>
+    </virtualType>
+
+    <!-- Logger -->
+    <type name="Pripoll\PickupPoints\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Pripoll\PickupPoints\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">customLogHandler</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Pripoll\PickupPoints\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+
+</config>

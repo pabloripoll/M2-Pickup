@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/* Add Row Map Layout
+ * @category  Pripoll
+ * @package   Pripoll_PickupPoints
+ * @author    Pablo Ripoll
+ * @copyright Copyright (c) 2020~ Pablo Ripoll (http://pabloripoll.com)
+ * @license   http://pabloripoll.com/magento2-modules-license.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+           <block class="Pripoll\PickupPoints\Block\Adminhtml\Posts\AddRow" name="edit_post" />
+        </referenceContainer>
+    </body>
+</page>
